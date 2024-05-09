@@ -7,8 +7,11 @@ export default {
     },
     extend: {
       colors: {
-        "primary": "#FE0000",
-        "secandery": "#0D79FE"
+        primary: "#FE0000",
+        secandery: "#0D79FE",
+      },
+      backgroundImage: {
+        BannerImg: "url('/public/Banner-bg-img.jpg')",
       },
     },
   },

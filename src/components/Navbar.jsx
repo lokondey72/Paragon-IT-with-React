@@ -8,18 +8,13 @@ const Navbar = () => {
         <div className="container flex justify-between items-center">
           <div>
             <Link to="#" className="flex items-center gap-2">
-              <div className="w-12 h-12">
+              <div className="w-38 h-14">
                 <img
-                  src="/public/Paragon-it-logo-(1).png"
+                  className="w-full h-full"
+                  src="/public/Paragon-it-logo2.png"
                   alt="Paragon-it-logo-(1)"
                 />
               </div>
-              <h5 className="flex flex-col items-center">
-                <span className="text-lg font-bold text-primary">Paragon</span>{" "}
-                <span className="text-sm font-medium text-secandery">
-                  IT Solution
-                </span>
-              </h5>
             </Link>
           </div>
           <div>
@@ -28,16 +23,16 @@ const Navbar = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
+                <Link to="/course">Course's</Link>
+              </li>
+              <li>
+                <Link to="/story">Success story</Link>
+              </li>
+              <li>
                 <Link to="/about">About us</Link>
               </li>
               <li>
-                <Link>Course</Link>
-              </li>
-              <li>
-                <Link>Home</Link>
-              </li>
-              <li>
-                <Link>Home</Link>
+                <Link to="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>
