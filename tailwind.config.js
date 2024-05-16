@@ -5,10 +5,16 @@ export default {
     container: {
       center: true,
     },
+    fontFamily: {
+      'mono': ["IBM Plex Mono", "monospace"],
+      'display': ['Oswald'],
+      'body': ['"Open Sans"'],
+    },
     extend: {
       colors: {
         primary: "#FE0000",
         secandery: "#0D79FE",
+        brand: "#E5E5E5"
       },
       backgroundImage: {
         BannerImg: "url('/public/Banner-bg-img.jpg')",

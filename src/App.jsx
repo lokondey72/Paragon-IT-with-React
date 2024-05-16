@@ -10,6 +10,7 @@ import Leyout from "./components/Leyout";
 import Course from "./components/pages/Course";
 import SuccessStory from "./components/pages/SuccessStory";
 import ContactUs from "./components/pages/ContactUs";
+import Apply from "./components/Apply";
 
 function App() {
   const router = createBrowserRouter(
@@ -21,6 +22,7 @@ function App() {
           <Route path="/course" element={<Course />}></Route>
           <Route path="/story" element={<SuccessStory />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
+          <Route path="/apply" element={<Apply />}></Route>
         </Route>
       </Route>
     )

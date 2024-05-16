@@ -4,7 +4,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 const Navbar = () => {
   return (
     <>
-      <div className="py-3 bg-[rgba(13,121,254,0.3)]">
+      <div className="py-3 lg:w-full fixed top-0 bg-[rgba(13,121,254,0.3)]">
         <div className="container flex justify-between items-center">
           <div>
             <Link to="#" className="flex items-center gap-2">
@@ -17,21 +17,21 @@ const Navbar = () => {
               </div>
             </Link>
           </div>
-          <div>
-            <ul className="flex gap-10">
-              <li>
+          <div className="hidden lg:block">
+            <ul className="flex text-white text-xl gap-10">
+              <li className=" hover:text-primary">
                 <Link to="/">Home</Link>
               </li>
-              <li>
+              <li className=" hover:text-primary">
                 <Link to="/course">Course's</Link>
               </li>
-              <li>
+              <li className=" hover:text-primary">
                 <Link to="/story">Success story</Link>
               </li>
-              <li>
-                <Link to="/about">About us</Link>
+              <li className=" hover:text-primary">
+                <Link to="/about">About Us</Link>
               </li>
-              <li>
+              <li className=" hover:text-primary">
                 <Link to="/contact">Contact Us</Link>
               </li>
             </ul>
