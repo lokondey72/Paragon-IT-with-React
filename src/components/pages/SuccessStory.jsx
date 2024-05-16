@@ -4,10 +4,10 @@ const SuccessStory = () => {
       <div className="bg-brand">
         <div className="container py-28">
           <div>
-            <h2 className="text-center text-4xl font-bold font-mono">
+            <h2 className="text-center text-4xl font-bold font-body">
               Success Story
             </h2>
-            <div className="w-72 h-1 bg-black m-auto"></div>
+            <div className="w-60 h-1 bg-black m-auto"></div>
           </div>
           <div className="flex gap-10 mt-20">
             <div className="w-1/2">
@@ -18,7 +18,7 @@ const SuccessStory = () => {
               />
             </div>
             <div className="w-1/2">
-              <h3 className="text-center text-3xl font-bold font-mono my-8">
+              <h3 className="text-center text-3xl font-bold font-body my-8">
                 Certificate Ceremony
               </h3>
               <p className="text-center text-lg mb-5">
@@ -32,7 +32,7 @@ const SuccessStory = () => {
           </div>
           <div className="flex gap-10 mt-20">
             <div className="w-1/2">
-              <h3 className="text-center text-3xl font-bold font-mono my-8">
+              <h3 className="text-center text-3xl font-bold font-body my-8">
                 Certificate Ceremony
               </h3>
               <p className="text-center text-lg mb-5">

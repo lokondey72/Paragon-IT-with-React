@@ -8,7 +8,7 @@ export default {
     fontFamily: {
       'mono': ["IBM Plex Mono", "monospace"],
       'display': ['Oswald'],
-      'body': ['"Open Sans"'],
+      'body': ["IBM Plex Sans", "sans-serif"],
     },
     extend: {
       colors: {

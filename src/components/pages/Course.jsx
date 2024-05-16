@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Course = () => {
   return (
     <>
@@ -5,14 +7,14 @@ const Course = () => {
         <div className="container mt-28">
           <div>
             <div>
-              <h2 className="text-center text-4xl font-bold font-mono">
+              <h2 className="text-center text-4xl font-bold font-body">
                 Our Course's
               </h2>
-              <div className="w-64 h-1 bg-black m-auto"></div>
+              <div className="w-56 h-1 bg-black m-auto"></div>
             </div>
             <div className="flex justify-between mx-4 my-14">
               <div>
-                <h4 className="w-64 text-3xl font-bold font-mono">
+                <h4 className="w-64 text-3xl font-bold font-body">
                   Our Populer Topics
                 </h4>
               </div>
@@ -24,8 +26,8 @@ const Course = () => {
                 </p>
               </div>
               <div>
-                <button className="px-10 py-3 font-bold rounded-xl bg-primary text-white">
-                  Apply Now
+                <button className="px-10 py-3 font-bold rounded-xl bg-gradient-to-r from-indigo-500 to-primary text-white hover:bg-indigo-600 hover:to-blue-600 transition">
+                  <Link to="/apply">Apply Now</Link>
                 </button>
               </div>
             </div>
@@ -83,16 +85,32 @@ const Course = () => {
                 <img src="/public/ms-word-logo.png" alt="course-img" />
               </div>
               <div className="w-44 h-44">
-                <img className="w-full" src="/public/ms-PowerPoint-logo.png" alt="course-img" />
+                <img
+                  className="w-full"
+                  src="/public/ms-PowerPoint-logo.png"
+                  alt="course-img"
+                />
               </div>
               <div className="w-44 h-44">
-                <img className="w-full" src="/public/ms-Excel-logo.png" alt="course-img" />
+                <img
+                  className="w-full"
+                  src="/public/ms-Excel-logo.png"
+                  alt="course-img"
+                />
               </div>
               <div className="w-44 h-44">
-                <img className="w-full" src="/public/ms-Outlook-Logo.png" alt="course-img" />
+                <img
+                  className="w-full"
+                  src="/public/ms-Outlook-Logo.png"
+                  alt="course-img"
+                />
               </div>
               <div className="w-44 h-44">
-                <img className="w-full" src="/public/ms-Access-Logo.png" alt="course-img" />
+                <img
+                  className="w-full"
+                  src="/public/ms-Access-Logo.png"
+                  alt="course-img"
+                />
               </div>
             </div>
           </div>

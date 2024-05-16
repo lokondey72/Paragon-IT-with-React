@@ -7,10 +7,10 @@ const About = () => {
         <div className="container">
           <div className="my-28">
             <div className="mb-20">
-              <h2 className="text-center font-bold font-mono text-4xl">
+              <h2 className="text-center font-bold font-body text-4xl">
                 About Us
               </h2>
-              <div className="w-44 h-1 bg-black m-auto"></div>
+              <div className="w-40 h-1 bg-black m-auto"></div>
             </div>
 
             <div className="flex justify-between mx-5">

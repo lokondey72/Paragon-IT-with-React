@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="Paragon-it-logo"
               />
             </button>
-            <h3 className="my-10 w-80 text-4xl font-bold font-mono">
+            <h3 className="my-10 w-80 text-4xl font-bold font-body">
               The Best IT in Your Home Town
             </h3>
             <p className="w-80 text-lg">
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           <div>
             <div>
-              <h4 className="mb-14 text-3xl font-bold font-mono">Menu</h4>
+              <h4 className="mb-14 text-3xl font-bold font-body">Menu</h4>
               <ul className="flex flex-col gap-5">
                 <li className="flex gap-2 items-center">
                   <Link to="/">Home</Link>
@@ -51,7 +51,7 @@ const Footer = () => {
           <div>
             <div>
               <div>
-                <h4 className="mb-14 text-3xl font-bold font-mono">Contacts</h4>
+                <h4 className="mb-14 text-3xl font-bold font-body">Contacts Us</h4>
               </div>
               <div className="flex items-center gap-3">
                 <FaLocationDot />
