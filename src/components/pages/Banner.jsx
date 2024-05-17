@@ -16,9 +16,11 @@ const Banner = () => {
                 </h1>
               </div>
               <div>
-                <button className="px-10 py-3 font-bold rounded-xl mr-10 bg-gradient-to-r from-indigo-500 to-primary text-white hover:bg-indigo-600 hover:to-blue-600 transition">
-                  <Link to="/apply">Apply Now</Link>
-                </button>
+                <Link to="/apply">
+                  <button className="px-10 py-3 font-bold rounded-xl mr-10 bg-gradient-to-r from-indigo-500 to-primary text-white hover:bg-indigo-600 hover:to-blue-600 transition">
+                    Apply Now
+                  </button>
+                </Link>
                 <button className="px-10 py-3 font-bold rounded-xl mr-10 bg-gradient-to-r from-indigo-500 to-primary text-white hover:bg-indigo-600 hover:to-blue-600 transition">
                   Join Free class
                 </button>

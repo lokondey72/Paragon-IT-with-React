@@ -16,6 +16,7 @@ import AdminPage from "./components/pages/AdminPage";
 import LogIn from "./components/pages/LogIn";
 import SignUp from "./components/pages/SignUp";
 import AdminLayout from "./components/AdminLayout";
+import StudentDetails from "./components/pages/StudentDetails";
 
 function App() {
   const router = createBrowserRouter(
@@ -32,6 +33,7 @@ function App() {
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminPage />}></Route>
+          <Route path="/admin/student" element={<StudentDetails />}></Route>
         </Route>
         <Route path="/login" element={<LogIn />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
