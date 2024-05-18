@@ -1,4 +1,4 @@
-const StudentItems = () => {
+const StudentItems = ({student}) => {
   return (
     <>
       <div className="w-2/5 p-5 rounded-3xl bg-gray-200">
@@ -12,32 +12,32 @@ const StudentItems = () => {
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Student Name :</p>
-            <p className="text-lg">Lokon Dey</p>
+            <p className="text-lg">{student?.studentName}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Father's Name :</p>
-            <p className="text-lg">Horibhokto Dey</p>
+            <p className="text-lg">{student?.stuFatherName}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Mother's Name :</p>
-            <p className="text-lg">Sabitri Dey</p>
+            <p className="text-lg">{student?.stuMotherName}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Number :</p>
-            <p className="text-lg">01796-889071</p>
+            <p className="text-lg">{student?.stuNumder}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">E-mail :</p>
-            <p className="text-lg">lokondey72@gmail.com</p>
+            <p className="text-lg">{student?.stuEmail}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Address :</p>
-            <p className="text-lg">Kalmakanda,Netrokona</p>
+            <p className="text-lg">{student?.stuAddress}</p>
           </div>
           <div className="flex gap-2">
             <p className="text-lg font-bold">Nid Card/Birth Certificate :</p>
             <div className="w-52">
-              <img className="w-full" src="/public/NID-e.jpg" alt="NID" />
+              <img className="w-full" src={student?.stuNidBirthCerti} alt="NID" />
             </div>
           </div>
           <div className="flex gap-2">

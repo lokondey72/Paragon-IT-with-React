@@ -1,7 +1,7 @@
 import About from "./About";
-import Banner from "./pages/Banner";
-import Course from "./pages/Course";
-import SuccessStory from "./pages/SuccessStory";
+import Course from "../pages/Course";
+import SuccessStory from "../pages/SuccessStory";
+import Banner from '../pages/Banner';
 
 const Home = () => {
   return (

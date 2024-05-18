@@ -5,18 +5,18 @@ import {
   Route,
 } from "react-router-dom";
 import Home from "./components/Home";
+import Apply from "./components/Apply";
 import About from "./components/About";
 import Leyout from "./components/Leyout";
-import Course from "./components/pages/Course";
-import SuccessStory from "./components/pages/SuccessStory";
-import ContactUs from "./components/pages/ContactUs";
-import Apply from "./components/Apply";
-import ApplySuccessfull from "./components/pages/ApplySuccessfull";
-import AdminPage from "./components/pages/AdminPage";
-import LogIn from "./components/pages/LogIn";
-import SignUp from "./components/pages/SignUp";
+import Course from "./pages/Course";
+import SuccessStory from "./pages/SuccessStory";
+import ContactUs from './pages/ContactUs';
+import ApplySuccessfull from './pages/ApplySuccessfull';
 import AdminLayout from "./components/AdminLayout";
-import StudentDetails from "./components/pages/StudentDetails";
+import AdminPage from "./pages/AdminPage";
+import StudentDetails from "./pages/StudentDetails";
+import LogIn from "./pages/LogIn";
+import SignUp from "./pages/SignUp";
 
 function App() {
   const router = createBrowserRouter(
@@ -25,10 +25,10 @@ function App() {
         <Route path="/" element={<Leyout />}>
           <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
+          <Route path="/apply" element={<Apply />}></Route>
           <Route path="/course" element={<Course />}></Route>
           <Route path="/story" element={<SuccessStory />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
-          <Route path="/apply" element={<Apply />}></Route>
           <Route path="/applysuccess" element={<ApplySuccessfull />}></Route>
         </Route>
         <Route path="/admin" element={<AdminLayout />}>

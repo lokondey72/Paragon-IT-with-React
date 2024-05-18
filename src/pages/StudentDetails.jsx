@@ -1,7 +1,24 @@
+import { getDatabase, ref, onValue } from "firebase/database";
 import { IoIosSearch } from "react-icons/io";
 import StudentItems from "./StudentItems";
+import { useEffect, useState } from "react";
 
 const StudentDetails = () => {
+  const db = getDatabase();
+  let [studentList, setStudentList] = useState([]);
+
+  useEffect(() => {
+    let arr = [];
+    const starCountRef = ref(db, "studentList/");
+    onValue(starCountRef, (snapshot) => {
+      snapshot.forEach((item) => {
+        arr.push({ ...item.val(), key: item.key });
+      });
+      setStudentList(arr);
+    });
+  }, []);
+  console.log(studentList);
+
   return (
     <>
       <div className="w-full mb-5">
@@ -21,9 +38,9 @@ const StudentDetails = () => {
         </div>
 
         <div className="flex flex-wrap gap-10 mx-10">
-          <StudentItems />
-          <StudentItems />
-          <StudentItems />
+          {studentList.map((item) => (
+            <StudentItems student={item} key={item.key} />
+          ))}
         </div>
       </div>
     </>

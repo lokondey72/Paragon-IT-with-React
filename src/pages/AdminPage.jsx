@@ -1,5 +1,4 @@
 import { IoIosSearch } from "react-icons/io";
-import { FaEdit } from "react-icons/fa";
 import AdminItems from "./AdminItems";
 
 const AdminPage = () => {

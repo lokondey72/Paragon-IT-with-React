@@ -1,32 +1,49 @@
-import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
-import { logedadmin } from "../../Slice/AdminSlice";
+import { getDatabase, ref, set } from "firebase/database";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { logedadmin } from "../Slice/AdminSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const LogIn = () => {
+  const auth = getAuth();
+  const db = getDatabase();
   const disptch = useDispatch();
   const navigate = useNavigate();
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
 
   const handelLogin = () => {
-    const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password)
       .then((res) => {
         if (res.user.emailVerified == false) {
           alert("Verified Your E-mail");
         } else {
-          alert("Login Successfull");
-          console.log("success");
           console.log(res);
+          set(ref(db, "admin/" + res.user.uid), {
+            username: res.user.displayName,
+            email: res.user.email,
+            photoURL: res.user.photoURL,
+          }).then(() => {
+            toast.success("Login successfull...", {
+              position: "top-center",
+              autoClose: 3000,
+              closeOnClick: true,
+              theme: "light",
+            });
+            console.log("Login Successfull");
+            localStorage.setItem("admin", JSON.stringify(res.user));
+            disptch(logedadmin(res.user));
+            console.log("clilk");
+            setTimeout(() => {
+              navigate("/admin");
+            }, 1500);
+          });
         }
-        localStorage.setItem("admin",JSON.stringify(res.user))
-        disptch(logedadmin(res.user));
-        setTimeout(() => {
-          navigate("/admit")
-        }, timeout);
       })
+
       .catch((err) => {
         console.log(err.code);
       });
@@ -36,6 +53,7 @@ const LogIn = () => {
     <>
       <div>
         <div className="flex items-center justify-center">
+          <ToastContainer />
           <div className="w-44 h-18 my-20">
             <img
               className="w-full h-full"

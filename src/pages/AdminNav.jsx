@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
+import { MdOutlineLogout } from "react-icons/md";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 const AdminNav = () => {
+  const admin = useSelector((state) => state.AdminSlice.admin);
+
+  const [logOut, setLogOut] = useState(false);
+
+  const hendelLogout = () => {
+    setLogOut(localStorage.setItem("admin", JSON.stringify("")));
+  };
+
   return (
     <>
       <div className="w-1/4 px-10 bg-gray-200">
@@ -9,12 +20,19 @@ const AdminNav = () => {
             <div className="w-14 h-14 rounded-full overflow-hidden">
               <img
                 className="w-full h-full"
-                src="/public/user-dufolt-img.png"
-                alt=""
+                src={admin.photoURL}
+                alt="Admin"
               />
             </div>
             <div>
-              <h5>mgd Billah</h5>
+              <h5>{admin.displayName}</h5>
+            </div>
+            <div className="ml-8">
+              <button className="px-2 py-2 text-xl rounded-xl text-white bg-gray-500 hover:bg-primary">
+                <Link onClick={() => hendelLogout(logOut)} to="/login">
+                  <MdOutlineLogout />
+                </Link>
+              </button>
             </div>
           </div>
           <div className="px-5">
