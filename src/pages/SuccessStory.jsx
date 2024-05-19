@@ -13,8 +13,8 @@ const SuccessStory = () => {
             <div className="w-1/2">
               <img
                 className="w-full"
-                src="/public/success-story-1.jpg"
-                alt=""
+                src="/success-story-1.jpg"
+                alt="success-story"
               />
             </div>
             <div className="w-1/2">
@@ -46,8 +46,8 @@ const SuccessStory = () => {
             <div className="w-1/2">
               <img
                 className="w-full"
-                src="/public/success-story-2.jpg"
-                alt=""
+                src="/success-story-2.jpg"
+                alt="success-story"
               />
             </div>
           </div>

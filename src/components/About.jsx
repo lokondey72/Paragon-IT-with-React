@@ -18,7 +18,7 @@ const About = () => {
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
-                    src="/public/CEO-of-paragonit.jpg"
+                    src="/CEO-of-paragonit.jpg"
                     alt=""
                   />
                 </div>
@@ -39,13 +39,15 @@ const About = () => {
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
-                    src="/public/HR-admin-of-paragonit.jpg"
+                    src="/HR-admin-of-paragonit.jpg"
                     alt=""
                   />
                 </div>
                 <div className="flex items-center gap-4">
                   <h4 className="text-2xl font-bold">Ismail Hossen Hridoy</h4>
-                  <p className="text-lg font-semibold">HR Admin of Paragon IT</p>
+                  <p className="text-lg font-semibold">
+                    HR Admin of Paragon IT
+                  </p>
                 </div>
                 <p className="w-[610px] text-lg">
                   Hi, This is Jubayer Ahammed Nayeem. I'm a professional
@@ -62,7 +64,7 @@ const About = () => {
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
-                    src="/public/Mantor-of-paragonit.jpg"
+                    src="/Mantor-of-paragonit.jpg"
                     alt=""
                   />
                 </div>
@@ -83,7 +85,7 @@ const About = () => {
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
-                    src="/public/CEO-of-paragonit.jpg"
+                    src="/CEO-of-paragonit.jpg"
                     alt=""
                   />
                 </div>

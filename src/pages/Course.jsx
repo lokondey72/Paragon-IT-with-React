@@ -38,7 +38,7 @@ const Course = () => {
                 <div className="w-2/6 m-2">
                   <img
                     className="w-full"
-                    src="/public/MS-Word.png"
+                    src="/MS-Word.png"
                     alt="our-course"
                   />
                   <p className="my-5 text-lg">
@@ -53,7 +53,7 @@ const Course = () => {
                 <div className="w-2/6 m-2">
                   <img
                     className="w-full"
-                    src="/public/ms-PowerPoint.jpg"
+                    src="/ms-PowerPoint.jpg"
                     alt="our-course"
                   />
                   <p className="my-5 text-lg">
@@ -68,7 +68,7 @@ const Course = () => {
                 <div className="w-2/6 m-2">
                   <img
                     className="w-full"
-                    src="/public/Excel-img.png"
+                    src="/Excel-img.png"
                     alt="our-course"
                   />
                   <p className="my-5 text-lg">
@@ -84,33 +84,33 @@ const Course = () => {
             </div>
             <div className="flex justify-center gap-24 my-10">
               <div className="w-44">
-                <img src="/public/ms-word-logo.png" alt="course-img" />
+                <img src="/ms-word-logo.png" alt="course-img" />
               </div>
               <div className="w-44 h-44">
                 <img
                   className="w-full"
-                  src="/public/ms-PowerPoint-logo.png"
+                  src="/ms-PowerPoint-logo.png"
                   alt="course-img"
                 />
               </div>
               <div className="w-44 h-44">
                 <img
                   className="w-full"
-                  src="/public/ms-Excel-logo.png"
+                  src="/ms-Excel-logo.png"
                   alt="course-img"
                 />
               </div>
               <div className="w-44 h-44">
                 <img
                   className="w-full"
-                  src="/public/ms-Outlook-Logo.png"
+                  src="/ms-Outlook-Logo.png"
                   alt="course-img"
                 />
               </div>
               <div className="w-44 h-44">
                 <img
                   className="w-full"
-                  src="/public/ms-Access-Logo.png"
+                  src="/ms-Access-Logo.png"
                   alt="course-img"
                 />
               </div>

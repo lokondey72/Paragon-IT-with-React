@@ -6,11 +6,11 @@ const Navbar = () => {
       <div className="py-3 lg:w-full fixed top-0 bg-[rgba(13,121,254,0.3)]">
         <div className="container flex justify-between items-center">
           <div>
-            <Link to="#" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center gap-2">
               <div className="w-38 h-14">
                 <img
                   className="w-full h-full"
-                  src="/public/Paragon-it-logo2.png"
+                  src="/Paragon-it-logo2.png"
                   alt="Paragon-it-logo-(1)"
                 />
               </div>
