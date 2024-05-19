@@ -28,24 +28,24 @@ const Apply = () => {
   const storage = getStorage();
   let key = studentList.map((item) => item.key);
 
-  useEffect(() => {
-    let arr = [];
-    const starCountRef = ref(db, "studentList/");
-    onValue(starCountRef, (snapshot) => {
-      snapshot.forEach((item) => {
-        arr.push({ ...item.val(), key: item.key });
-      });
-      setStudentList(arr);
-    });
-  }, []);
-  console.log(key);
+  // useEffect(() => {
+  //   let arr = [];
+  //   const starCountRef = ref(db, "studentList/");
+  //   onValue(starCountRef, (snapshot) => {
+  //     snapshot.forEach((item) => {
+  //       arr.push({ ...item.val(), key: item.key });
+  //     });
+  //     setStudentList(arr);
+  //   });
+  // }, []);
+  // console.log(key);
 
   const handelApply = () => {
     console.log("click");
 
     const storageRef = ires(storage, studentEmail);
-    uploadBytes(storageRef, studentNidBirth, studentCertificate)
-      .then((snapshot) => {
+    uploadBytes(storageRef, studentCertificate)
+      .then(() => {
         getDownloadURL(storageRef).then((url) => {
           console.log(url);
           // set(ref(db, "studentList/"), {
@@ -65,7 +65,7 @@ const Apply = () => {
         console.log(err.code);
       });
   };
-console.log(studentCertificate)
+  console.log(studentCertificate);
   return (
     <>
       <div className="container my-24">
@@ -134,7 +134,12 @@ console.log(studentCertificate)
                 <div className="flex items-center gap-5">
                   <p className="w-40">Nid Card/Birth Certificate:</p>
                   <input
-                    onChange={(e) => setStudentCertificate((prv)=>({...prv, nid: e.target.files[0] }) )}
+                    onChange={(e) =>
+                      setStudentCertificate((prv) => ({
+                        ...prv,
+                        nid: e.target.files[0],
+                      }))
+                    }
                     type="file"
                     className="w-full bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     placeholder="Certificate"
