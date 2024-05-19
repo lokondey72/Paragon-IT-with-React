@@ -12,7 +12,7 @@ const Footer = () => {
             <button className="w-38 h-14">
               <img
                 className="w-full h-full"
-                src="/public/Paragon-it-logo2.png"
+                src="/Paragon-it-logo2.png"
                 alt="Paragon-it-logo"
               />
             </button>
