@@ -59,7 +59,7 @@ const ApplyNow = () => {
 
               <div className="flex flex-col">
                 <div className="flex items-center gap-5">
-                  <p className="w-40">Applicant Name:</p>
+                  <p className="w-32 lg:w-40">Applicant Name:</p>
                   <input
                     onChange={(e) => setStudentName(e.target.value)}
                     type="text"
@@ -68,7 +68,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">Father's Name:</p>
+                  <p className="w-32 lg:w-40">Father's Name:</p>
                   <input
                     onChange={(e) => setFatherName(e.target.value)}
                     type="text"
@@ -77,7 +77,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">Mother's Name:</p>
+                  <p className="w-32 lg:w-40">Mother's Name:</p>
                   <input
                     onChange={(e) => setMotherName(e.target.value)}
                     type="text"
@@ -86,7 +86,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">Number :</p>
+                  <p className="w-32 lg:w-40">Number :</p>
                   <input
                     onChange={(e) => setStudentNumber(e.target.value)}
                     type="number"
@@ -95,7 +95,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">E-mail :</p>
+                  <p className="w-32 lg:w-40">E-mail :</p>
                   <input
                     onChange={(e) => setStudentEmail(e.target.value)}
                     type="email"
@@ -104,7 +104,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">Address :</p>
+                  <p className="w-32 lg:w-40">Address :</p>
                   <input
                     onChange={(e) => setStudentAddress(e.target.value)}
                     type="text"
@@ -113,7 +113,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">Applicant Photo:</p>
+                  <p className="w-32 lg:w-40">Applicant Photo:</p>
                   <input
                     onChange={(e) =>
                       setStudentCertificate((prv) => ({
@@ -127,7 +127,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">Nid Card/Birth Certificate:</p>
+                  <p className="w-32 lg:w-40">Nid/Birth Certificate:</p>
                   <input
                     onChange={(e) =>
                       setStudentCertificate((prv) => ({
@@ -141,7 +141,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">JSC/SSC Certificate:</p>
+                  <p className="w-32 lg:w-40">JSC/SSC Certificate:</p>
                   <input
                     onChange={(e) =>
                       setStudentCertificate((prv) => ({
@@ -155,7 +155,7 @@ const ApplyNow = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
-                  <p className="w-40">JSC/SSC Registration:</p>
+                  <p className="w-32 lg:w-40">JSC/SSC Registration:</p>
                   <input
                     onChange={(e) =>
                       setStudentCertificate((prv) => ({

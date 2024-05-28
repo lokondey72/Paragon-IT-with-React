@@ -34,7 +34,7 @@ const Navbar = () => {
           </div>
 
           {show && (
-            <div className="w-2/3 pl-28 py-8 absolute top-[80px] right-0 flex flex-col bg-[rgb(0,0,0,0.5)]">
+            <div className="w-2/3 pl-20 py-8 absolute top-[80px] right-0 flex flex-col bg-[rgb(0,0,0,0.5)]">
               <div className="block">
                 <ul className="flex flex-col text-white text-xl gap-10">
                   <li className=" hover:text-primary">

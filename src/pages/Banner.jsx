@@ -17,7 +17,7 @@ const Banner = () => {
               </div>
               <div className="m-auto">
                 <Link to="/apply">
-                  <button className="w-48 py-3 font-bold rounded-xl mr-10 bg-gradient-to-r from-indigo-500 to-primary text-white hover:bg-indigo-600 hover:to-blue-600 transition">
+                  <button className="w-48 py-3 mb-6 lg:mb-0 font-bold rounded-xl mr-10 bg-gradient-to-r from-indigo-500 to-primary text-white hover:bg-indigo-600 hover:to-blue-600 transition">
                     Apply Now
                   </button>
                 </Link>
