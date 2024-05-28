@@ -38,7 +38,9 @@ const Navbar = () => {
               <div className="block">
                 <ul className="flex flex-col text-white text-xl gap-10">
                   <li className=" hover:text-primary">
-                    <Link to="/">Home</Link>
+                    <Link onClick={() => setShow(!show)} to="/">
+                      Home
+                    </Link>
                   </li>
                   <li className=" hover:text-primary">
                     <Link onClick={() => setShow(!show)} to="/course">
