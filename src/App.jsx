@@ -26,8 +26,8 @@ function App() {
         <Route path="/" element={<Leyout />}>
           <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
-          <Route path="/apply" element={<Apply />}></Route>
-          <Route path="/applyn" element={<ApplyNow />}></Route>
+          {/* <Route path="/apply" element={<Apply />}></Route> */}
+          <Route path="/apply" element={<ApplyNow />}></Route>
           <Route path="/course" element={<Course />}></Route>
           <Route path="/story" element={<SuccessStory />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>

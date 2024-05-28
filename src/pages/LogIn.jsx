@@ -57,7 +57,7 @@ const LogIn = () => {
           <div className="w-44 h-18 my-20">
             <img
               className="w-full h-full"
-              src="/public/Paragon-it-logo2.png"
+              src="/Paragon-it-logo2.png"
               alt=""
             />
           </div>

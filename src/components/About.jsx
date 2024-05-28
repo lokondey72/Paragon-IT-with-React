@@ -13,20 +13,20 @@ const About = () => {
               <div className="w-40 h-1 bg-black m-auto"></div>
             </div>
 
-            <div className="flex justify-between mx-5">
-              <div className="flex flex-col items-center gap-8">
+            <div className="lg:flex justify-between mb-10 mx-5">
+              <div className="flex flex-col items-center mb-10 lg:m-0 gap-8">
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
                     src="/CEO-of-paragonit.jpg"
-                    alt=""
+                    alt="CEO-of-paragonit"
                   />
                 </div>
                 <div className="flex items-center gap-4">
                   <h4 className="text-2xl font-bold">Muzahid Billah</h4>
                   <p className="text-lg font-semibold">CEO of Paragon IT</p>
                 </div>
-                <p className="w-[610px] text-lg">
+                <p className="lg:w-[610px] text-center text-lg">
                   Hi, This is Jubayer Ahammed Nayeem. I'm a professional
                   Graphics Designer, Video Editor and specialist in Microsoft
                   Word, Excel, Power Point. I'm here as Trainer for your course
@@ -35,7 +35,7 @@ const About = () => {
                   last 6 years.
                 </p>
               </div>
-              <div className="flex flex-col items-center gap-8">
+              <div className="flex flex-col items-center mb-10 lg:m-0 gap-8">
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
@@ -49,7 +49,7 @@ const About = () => {
                     HR Admin of Paragon IT
                   </p>
                 </div>
-                <p className="w-[610px] text-lg">
+                <p className="lg:w-[610px] text-center text-lg">
                   Hi, This is Jubayer Ahammed Nayeem. I'm a professional
                   Graphics Designer, Video Editor and specialist in Microsoft
                   Word, Excel, Power Point. I'm here as Trainer for your course
@@ -59,8 +59,8 @@ const About = () => {
                 </p>
               </div>
             </div>
-            <div className="flex justify-between mx-5">
-              <div className="flex flex-col items-center gap-8">
+            <div className="lg:flex justify-between mx-5">
+              <div className="flex flex-col items-center mb-10 lg:m-0 gap-8">
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
@@ -72,7 +72,7 @@ const About = () => {
                   <h4 className="text-2xl font-bold">Jubayer Ahammed Nayeem</h4>
                   <p className="text-lg font-semibold">Trainer of Paragon IT</p>
                 </div>
-                <p className="w-[610px] text-lg">
+                <p className="lg:w-[610px] text-center text-lg">
                   Hi, This is Jubayer Ahammed Nayeem. I'm a professional
                   Graphics Designer, Video Editor and specialist in Microsoft
                   Word, Excel, Power Point. I'm here as Trainer for your course
@@ -81,7 +81,7 @@ const About = () => {
                   last 6 years.
                 </p>
               </div>
-              <div className="flex flex-col items-center gap-8">
+              <div className="flex flex-col items-center mb-10 lg:m-0 gap-8">
                 <div className="w-32 rounded-full overflow-hidden">
                   <img
                     className="w-full h-full"
@@ -93,7 +93,7 @@ const About = () => {
                   <h4 className="text-2xl font-bold">Muzahid Billah</h4>
                   <p className="text-lg font-semibold">CEO of Paragon IT</p>
                 </div>
-                <p className="w-[610px] text-lg">
+                <p className="lg:w-[610px] text-center text-lg">
                   Hi, This is Jubayer Ahammed Nayeem. I'm a professional
                   Graphics Designer, Video Editor and specialist in Microsoft
                   Word, Excel, Power Point. I'm here as Trainer for your course
