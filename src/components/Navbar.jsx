@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="py-3 w-full lg:w-full relative lg:fixed top-0 bg-[rgba(13,121,254,0.3)]">
+      <div className="py-3 w-full lg:w-full relative lg:fixed top-0 bg-[rgba(13,121,254,0.3)] px-2">
         <div className="container flex justify-between items-center">
           <div>
             <Link to="/" className="flex items-center gap-2">
@@ -41,22 +41,33 @@ const Navbar = () => {
                     <Link to="/">Home</Link>
                   </li>
                   <li className=" hover:text-primary">
-                    <Link to="/course">Course's</Link>
+                    <Link onClick={() => setShow(!show)} to="/course">
+                      Course's
+                    </Link>
                   </li>
                   <li className=" hover:text-primary">
-                    <Link to="/story">Success story</Link>
+                    <Link onClick={() => setShow(!show)} to="/story">
+                      Success story
+                    </Link>
                   </li>
                   <li className=" hover:text-primary">
-                    <Link to="/about">About Us</Link>
+                    <Link onClick={() => setShow(!show)} to="/about">
+                      About Us
+                    </Link>
                   </li>
                   <li className=" hover:text-primary">
-                    <Link to="/contact">Contact Us</Link>
+                    <Link onClick={() => setShow(!show)} to="/contact">
+                      Contact Us
+                    </Link>
                   </li>
                 </ul>
               </div>
               <div className="mt-10 block">
                 <Link to="/apply">
-                  <button className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-indigo-500 bg-primary text-slate-50 text-lg rounded-xl font-semibold hover:bg-secandery">
+                  <button
+                    onClick={() => setShow(!show)}
+                    className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-indigo-500 bg-primary text-slate-50 text-lg rounded-xl font-semibold hover:bg-secandery"
+                  >
                     Apply Now
                   </button>
                 </Link>

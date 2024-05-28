@@ -1,5 +1,5 @@
-import { getDatabase, onValue, push, ref, set } from "firebase/database";
-import { useEffect, useState } from "react";
+import { getDatabase, push, ref, set } from "firebase/database";
+import { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail, MdCall } from "react-icons/md";
 import {
@@ -25,10 +25,9 @@ const ApplyNow = () => {
   });
   const storage = getStorage();
 
-  
   const handelApply = async () => {
-      const date = new Date();
-      date.setFullYear(2024);
+    const date = new Date();
+    date.setFullYear(2024);
     const certificates = {};
     for (let certificateName in studentCertificate) {
       const storageRef = ires(storage, `${studentEmail} - ${certificateName}`);
@@ -51,8 +50,8 @@ const ApplyNow = () => {
   return (
     <>
       <div className="container my-24">
-        <div className="flex justify-between">
-          <div className="w-2/5 ml-60 flex flex-col items-center justify-center">
+        <div className="lg:flex justify-between">
+          <div className="lg:w-2/5 lg:ml-60 flex flex-col items-center justify-center">
             <div className="w-full bg-white rounded-lg p-6">
               <h2 className="text-3xl text-center font-mono font-bold text-gray-900 mb-20">
                 Admission Form
@@ -180,9 +179,9 @@ const ApplyNow = () => {
               </div>
             </div>
           </div>
-          <div className="w-2/5 flex flex-col items-center justify-center">
-            <div>
-              <h4 className="mb-10 text-3xl font-bold font-body">Paragon IT</h4>
+          <div className="lg:w-2/5 flex flex-col lg:items-center justify-center mx-5 lg:mx-0">
+            <div className="text-center">
+              <h4 className="mb-8 text-3xl font-bold font-body">Paragon IT</h4>
             </div>
             <div className="flex items-center gap-3">
               <FaLocationDot />
