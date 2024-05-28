@@ -1,12 +1,13 @@
-const StudentItems = ({student}) => {
+const StudentItems = ({ student }) => {
+  // console.log(student);
   return (
     <>
-      <div className="w-2/5 p-5 rounded-3xl bg-gray-200">
+      <div className="w-10/12 m-auto h-fit p-5 rounded-3xl bg-gray-200">
         <div className="bg-neutral-800 rounded-3xl text-neutral-300 p-4 flex flex-col items-start justify-center gap-3">
-          <div className="w-52 h-52 m-auto bg-sky-300 rounded-2xl">
+          <div className="w-52 h-52 m-auto bg-sky-300 rounded-full hover:rounded-3xl overflow-hidden cursor-pointer">
             <img
               className="w-full h-full"
-              src="/public/Student-img-1.png"
+              src={student?.studentprofile}
               alt="Student-img"
             />
           </div>
@@ -16,48 +17,54 @@ const StudentItems = ({student}) => {
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Father's Name :</p>
-            <p className="text-lg">{student?.stuFatherName}</p>
+            <p className="text-lg">{student?.fatherName}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Mother's Name :</p>
-            <p className="text-lg">{student?.stuMotherName}</p>
+            <p className="text-lg">{student?.motherName}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Number :</p>
-            <p className="text-lg">{student?.stuNumder}</p>
+            <p className="text-lg">{student?.studentNumber}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">E-mail :</p>
-            <p className="text-lg">{student?.stuEmail}</p>
+            <p className="text-lg">{student?.studentEmail}</p>
           </div>
           <div className="flex items-center gap-4">
             <p className="text-lg font-bold">Address :</p>
-            <p className="text-lg">{student?.stuAddress}</p>
+            <p className="text-lg">{student?.studentAddress}</p>
           </div>
-          <div className="flex gap-2">
-            <p className="text-lg font-bold">Nid Card/Birth Certificate :</p>
-            <div className="w-52">
-              <img className="w-full" src={student?.stuNidBirthCerti} alt="NID" />
+          <div className="flex gap-5">
+            <div className="flex gap-2">
+              <p className="w-36 text-lg font-bold">Nid Card/Birth Certificate :</p>
+              <div className="w-52">
+                <img
+                  className="w-full"
+                  src={student?.nidcertificate}
+                  alt="NID"
+                />
+              </div>
             </div>
-          </div>
-          <div className="flex gap-2">
-            <p className="text-lg font-bold">JSC/SSC Certificate :</p>
-            <div className="w-52">
-              <img
-                className="w-full"
-                src="/public/JSCSSC Certificate.jpg"
-                alt="Certificate"
-              />
+            <div className="flex gap-2">
+              <p className="w-36 text-lg font-bold">JSC/SSC Certificate :</p>
+              <div className="w-52">
+                <img
+                  className="w-full"
+                  src={student?.jsccertificate}
+                  alt="Certificate"
+                />
+              </div>
             </div>
-          </div>
-          <div className="flex gap-2">
-            <p className="text-lg font-bold">JSC/SSC Registration :</p>
-            <div className="w-52">
-              <img
-                className="w-full"
-                src="/public/JSCSSC Registration.jpg"
-                alt="Registration"
-              />
+            <div className="flex gap-2">
+              <p className="w-36 text-lg font-bold">JSC/SSC Registration :</p>
+              <div className="w-52">
+                <img
+                  className="w-full"
+                  src={student?.jscRegistration}
+                  alt="Registration"
+                />
+              </div>
             </div>
           </div>
         </div>

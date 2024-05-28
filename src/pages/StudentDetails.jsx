@@ -17,7 +17,7 @@ const StudentDetails = () => {
       setStudentList(arr);
     });
   }, []);
-  console.log(studentList);
+  // console.log(studentList);
 
   return (
     <>

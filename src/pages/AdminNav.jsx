@@ -2,14 +2,20 @@ import { Link } from "react-router-dom";
 import { MdOutlineLogout } from "react-icons/md";
 import { useState } from "react";
 import { useSelector } from "react-redux";
+import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 const AdminNav = () => {
+  let [show, setShow] = useState(false);
   const admin = useSelector((state) => state.AdminSlice.admin);
 
   const [logOut, setLogOut] = useState(false);
 
   const hendelLogout = () => {
     setLogOut(localStorage.setItem("admin", JSON.stringify("")));
+  };
+
+  const handeldrop = () => {
+    setShow(!show);
   };
 
   return (
@@ -20,12 +26,12 @@ const AdminNav = () => {
             <div className="w-14 h-14 rounded-full overflow-hidden">
               <img
                 className="w-full h-full"
-                src={admin.photoURL}
+                src={admin?.photoURL}
                 alt="Admin"
               />
             </div>
             <div>
-              <h5>{admin.displayName}</h5>
+              <h5>{admin?.displayName}</h5>
             </div>
             <div className="ml-8">
               <button className="px-2 py-2 text-xl rounded-xl text-white bg-gray-500 hover:bg-primary">
@@ -46,14 +52,27 @@ const AdminNav = () => {
               </li>
               <li>
                 <Link to="/admin/student">
-                  <button className="px-5 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary">
-                    Student Details
+                  <button
+                    onClick={handeldrop}
+                    className="flex items-center gap-2 px-5 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary"
+                  >
+                    <p>Student Details</p>
+                    <IoIosArrowDroprightCircle />
                   </button>
                 </Link>
               </li>
             </ul>
           </div>
         </div>
+        {show && (
+          <div className="mx-5">
+            <div>
+              <button className="w-full py-3 text-white bg-gray-500 hover:bg-primary">
+                28/05/2024
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

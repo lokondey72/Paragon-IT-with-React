@@ -8,9 +8,8 @@ import {
   uploadBytes,
   getDownloadURL,
 } from "firebase/storage";
-import { Link } from "react-router-dom";
 
-const Apply = () => {
+const ApplyNow = () => {
   const db = getDatabase();
   let [studentName, setStudentName] = useState("");
   let [fatherName, setFatherName] = useState("");
@@ -18,56 +17,37 @@ const Apply = () => {
   let [studentNumber, setStudentNumber] = useState("");
   let [studentEmail, setStudentEmail] = useState("");
   let [studentAddress, setStudentAddress] = useState("");
-  let [studentNidBirth, setStudentNidBirth] = useState("");
   let [studentCertificate, setStudentCertificate] = useState({
-    nid: "",
-    ssc: "",
-    jsc: "",
+    studentprofile: "",
+    nidcertificate: "",
+    jsccertificate: "",
+    jscRegistration: "",
   });
-  let [studentRegistration, setStudentRegistration] = useState("");
-  let [studentTest, setStudentTest] = useState("");
-  let [studentList, setStudentList] = useState([]);
   const storage = getStorage();
-  // let key = studentList.map((item) => item.key);
 
-  // useEffect(() => {
-  //   let arr = [];
-  //   const starCountRef = ref(db, "studentList/");
-  //   onValue(starCountRef, (snapshot) => {
-  //     snapshot.forEach((item) => {
-  //       arr.push({ ...item.val(), key: item.key });
-  //     });
-  //     setStudentList(arr);
-  //   });
-  // }, []);
-  // console.log(key);
-
-  const handelApply = () => {
-    console.log("click");
-
-    // const storageRef = ires(storage, studentEmail);
-    // uploadBytes(storageRef, studentCertificate)
-    //   .then(() => {
-    //     getDownloadURL(storageRef).then((url) => {
-    //       console.log(url);
-    //       set(ref(db, "studentList/"), {
-    //         studentName: studentName,
-    //         stuFatherName: fatherName,
-    //         stuMotherName: motherName,
-    //         stuNumder: studentNumber,
-    //         stuEmail: studentEmail,
-    //         stuAddress: studentAddress,
-    //         stuNidBirthCerti: url,
-    //         // stucertificate: studentCertificate,
-    //         // stuRegistration: studentRegistration,
-    //       });
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     console.log(err.code);
-    //   });
+  
+  const handelApply = async () => {
+      const date = new Date();
+      date.setFullYear(2024);
+    const certificates = {};
+    for (let certificateName in studentCertificate) {
+      const storageRef = ires(storage, `${studentEmail} - ${certificateName}`);
+      await uploadBytes(storageRef, studentCertificate[certificateName]);
+      const downloadURL = await getDownloadURL(storageRef);
+      certificates[certificateName] = downloadURL;
+    }
+    await set(push(ref(db, "studentList/")), {
+      studentName,
+      fatherName,
+      motherName,
+      studentNumber,
+      studentEmail,
+      studentAddress,
+      date,
+      ...certificates,
+    });
   };
-  console.log(studentCertificate);
+
   return (
     <>
       <div className="container my-24">
@@ -134,9 +114,28 @@ const Apply = () => {
                   />
                 </div>
                 <div className="flex items-center gap-5">
+                  <p className="w-40">Applicant Photo:</p>
+                  <input
+                    onChange={(e) =>
+                      setStudentCertificate((prv) => ({
+                        ...prv,
+                        studentprofile: e.target.files[0],
+                      }))
+                    }
+                    type="file"
+                    className="w-full bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                    placeholder="Certificate"
+                  />
+                </div>
+                <div className="flex items-center gap-5">
                   <p className="w-40">Nid Card/Birth Certificate:</p>
                   <input
-                    onChange={(e) => studentCertificate((e) => e.target.files[0])}
+                    onChange={(e) =>
+                      setStudentCertificate((prv) => ({
+                        ...prv,
+                        nidcertificate: e.target.files[0],
+                      }))
+                    }
                     type="file"
                     className="w-full bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     placeholder="Certificate"
@@ -145,7 +144,12 @@ const Apply = () => {
                 <div className="flex items-center gap-5">
                   <p className="w-40">JSC/SSC Certificate:</p>
                   <input
-                    onChange={(e) => studentCertificate(e.target.files[0])}
+                    onChange={(e) =>
+                      setStudentCertificate((prv) => ({
+                        ...prv,
+                        jsccertificate: e.target.files[0],
+                      }))
+                    }
                     type="file"
                     className="w-full bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     placeholder="Certificate"
@@ -154,22 +158,25 @@ const Apply = () => {
                 <div className="flex items-center gap-5">
                   <p className="w-40">JSC/SSC Registration:</p>
                   <input
-                    onChange={(e) => studentCertificate(e.target.value)}
+                    onChange={(e) =>
+                      setStudentCertificate((prv) => ({
+                        ...prv,
+                        jscRegistration: e.target.files[0],
+                      }))
+                    }
                     type="file"
                     className="w-full bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
                     placeholder="Certificate"
                   />
                 </div>
 
-                <Link to="lokondey1@gmail.com">
-                  <button
-                    onClick={handelApply}
-                    type="submit"
-                    className="bg-gradient-to-r from-indigo-500 to-primary text-white font-bold py-2 px-4 rounded-md mt-10 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
-                  >
-                    Apply
-                  </button>
-                </Link>
+                <button
+                  onClick={handelApply}
+                  type="submit"
+                  className="bg-gradient-to-r from-indigo-500 to-primary text-white font-bold py-2 px-4 rounded-md mt-10 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+                >
+                  Apply
+                </button>
               </div>
             </div>
           </div>
@@ -196,4 +203,4 @@ const Apply = () => {
   );
 };
 
-export default Apply;
+export default ApplyNow;

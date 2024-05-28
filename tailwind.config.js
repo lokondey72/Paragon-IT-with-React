@@ -17,7 +17,7 @@ export default {
         brand: "#E5E5E5"
       },
       backgroundImage: {
-        BannerImg: "url('/public/Banner-bg-img.jpg')",
+        BannerImg: "url('/Banner-bg-img.jpg')",
       },
     },
   },

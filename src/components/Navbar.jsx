@@ -36,7 +36,7 @@ const Navbar = () => {
             </ul>
           </div>
           <div>
-            <Link to="/apply">
+            <Link to="/applyn">
               <button className="flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-indigo-500 bg-primary text-slate-50 text-lg rounded-xl font-semibold hover:bg-secandery">
                 Apply Now
               </button>

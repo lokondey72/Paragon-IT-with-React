@@ -17,6 +17,7 @@ import AdminPage from "./pages/AdminPage";
 import StudentDetails from "./pages/StudentDetails";
 import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
+import ApplyNow from "./components/ApplyNow";
 
 function App() {
   const router = createBrowserRouter(
@@ -26,6 +27,7 @@ function App() {
           <Route index element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/apply" element={<Apply />}></Route>
+          <Route path="/applyn" element={<ApplyNow />}></Route>
           <Route path="/course" element={<Course />}></Route>
           <Route path="/story" element={<SuccessStory />}></Route>
           <Route path="/contact" element={<ContactUs />}></Route>
