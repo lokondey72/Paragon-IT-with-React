@@ -22,25 +22,11 @@ const Banner = () => {
                   </button>
                 </Link>
                 <button className="w-48 py-3 font-bold rounded-xl mr-10 bg-gradient-to-r from-indigo-500 to-primary text-white hover:bg-indigo-600 hover:to-blue-600 transition">
-                  Join Free class
+                  Contact Us
                 </button>
               </div>
             </div>
           </div>
-          {/* <div>
-            <div className="rounded-lg overflow-hidden">
-              <iframe
-                width="590"
-                height="355"
-                src="https://www.youtube.com/embed/TB7xjRiLJbA?si=SwUkl8nYcWqTz9Ky"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div> */}
         </div>
       </div>
     </>

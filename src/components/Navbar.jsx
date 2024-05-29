@@ -34,8 +34,8 @@ const Navbar = () => {
           </div>
 
           {show && (
-            <div className="w-2/3 pl-20 py-8 absolute top-[80px] right-0 flex flex-col bg-[rgb(0,0,0,0.5)]">
-              <div className="block">
+            <div className="w-full py-8 absolute top-[80px] right-0 flex flex-col bg-[rgb(0,0,0,0.5)]">
+              <div className="mx-auto">
                 <ul className="flex flex-col text-white text-xl gap-10">
                   <li className=" hover:text-primary">
                     <Link onClick={() => setShow(!show)} to="/">
@@ -64,7 +64,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </div>
-              <div className="mt-10 block">
+              <div className="mt-10 mx-auto">
                 <Link to="/apply">
                   <button
                     onClick={() => setShow(!show)}
