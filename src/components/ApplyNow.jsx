@@ -23,11 +23,30 @@ const ApplyNow = () => {
     jsccertificate: "",
     jscRegistration: "",
   });
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const d = new Date();
+  const month = monthNames[d.getMonth()];
   const storage = getStorage();
+  var today = new Date();
+  var dd = String(today.getDate()).padStart(2, "0");
+  var mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  var yyyy = today.getFullYear();
+  today = mm + "/" + dd + "/" + yyyy;
 
   const handelApply = async () => {
-    const date = new Date();
-    date.setFullYear(2024);
     const certificates = {};
     for (let certificateName in studentCertificate) {
       const storageRef = ires(storage, `${studentEmail} - ${certificateName}`);
@@ -42,7 +61,8 @@ const ApplyNow = () => {
       studentNumber,
       studentEmail,
       studentAddress,
-      date,
+      month,
+      today,
       ...certificates,
     });
   };

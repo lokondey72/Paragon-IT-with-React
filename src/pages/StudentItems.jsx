@@ -2,8 +2,12 @@ const StudentItems = ({ student }) => {
   // console.log(student);
   return (
     <>
-      <div className="w-10/12 m-auto h-fit p-5 rounded-3xl bg-gray-200">
+      <div className="w-4/5 h-fit p-5 rounded-3xl bg-gray-200">
         <div className="bg-neutral-800 rounded-3xl text-neutral-300 p-4 flex flex-col items-start justify-center gap-3">
+          <div className="flex gap-2">
+            <p>Apply Date:-</p>
+            <p>{student?.today}</p>
+          </div>
           <div className="w-52 h-52 m-auto bg-sky-300 rounded-full hover:rounded-3xl overflow-hidden cursor-pointer">
             <img
               className="w-full h-full"
@@ -36,8 +40,10 @@ const StudentItems = ({ student }) => {
             <p className="text-lg">{student?.studentAddress}</p>
           </div>
           <div className="flex gap-5">
-            <div className="flex gap-2">
-              <p className="w-36 text-lg font-bold">Nid Card/Birth Certificate :</p>
+            <div className="">
+              <p className="w-36 text-lg font-bold">
+                Nid Card/Birth Certificate :
+              </p>
               <div className="w-52">
                 <img
                   className="w-full"
@@ -46,7 +52,7 @@ const StudentItems = ({ student }) => {
                 />
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="">
               <p className="w-36 text-lg font-bold">JSC/SSC Certificate :</p>
               <div className="w-52">
                 <img
@@ -56,7 +62,7 @@ const StudentItems = ({ student }) => {
                 />
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="">
               <p className="w-36 text-lg font-bold">JSC/SSC Registration :</p>
               <div className="w-52">
                 <img

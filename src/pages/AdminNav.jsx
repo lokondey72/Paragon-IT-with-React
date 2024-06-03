@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-const AdminNav = () => {
+const AdminNav = ({ student }) => {
+  // console.log(student);
   let [show, setShow] = useState(false);
   const admin = useSelector((state) => state.AdminSlice.admin);
 
@@ -21,7 +22,7 @@ const AdminNav = () => {
   return (
     <>
       <div className="w-1/4 px-10 bg-gray-200">
-        <div className="my-8 py-10 px-10 rounded-2xl bg-white">
+        <div className="my-5 py-10 px-10 rounded-2xl bg-white">
           <div className="flex items-center mb-10 gap-4">
             <div className="w-14 h-14 rounded-full overflow-hidden">
               <img
@@ -54,7 +55,7 @@ const AdminNav = () => {
                 <Link to="/admin/student">
                   <button
                     onClick={handeldrop}
-                    className="flex items-center gap-2 px-5 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary"
+                    className="flex items-center gap-2 w-40 pl-4 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary"
                   >
                     <p>Student Details</p>
                     <IoIosArrowDroprightCircle />

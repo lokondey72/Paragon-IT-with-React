@@ -1,7 +1,8 @@
 import { getDatabase, ref, onValue } from "firebase/database";
 import { IoIosSearch } from "react-icons/io";
-import StudentItems from "./StudentItems";
+// import StudentItems from "./StudentItems";
 import { useEffect, useState } from "react";
+import ApplyDateS from "./ApplyDateS";
 
 const StudentDetails = () => {
   const db = getDatabase();
@@ -22,7 +23,7 @@ const StudentDetails = () => {
   return (
     <>
       <div className="w-full mb-5">
-        <div className="rounded-lg bg-gray-200 m-5 p-5">
+        <div className="w-4/5 rounded-lg bg-gray-200 m-5 p-5">
           <div className="w-full flex items-center rounded-xl overflow-hidden">
             <div className="py-2 px-2 text-2xl bg-white">
               <IoIosSearch />
@@ -36,12 +37,17 @@ const StudentDetails = () => {
             </div>
           </div>
         </div>
+        <div className="flex flex-wrap">
+          {studentList.map((item) => (
+            <ApplyDateS student={item} key={item.key} />
+          ))}
+        </div>
 
-        <div className="flex flex-wrap gap-10 mx-10">
+        {/* <div className="flex flex-wrap gap-10 mx-10">
           {studentList.map((item) => (
             <StudentItems student={item} key={item.key} />
           ))}
-        </div>
+        </div> */}
       </div>
     </>
   );
