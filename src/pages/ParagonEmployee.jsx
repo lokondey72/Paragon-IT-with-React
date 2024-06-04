@@ -6,7 +6,9 @@ const ParagonEmployee = () => {
   return (
     <div className="w-full bg-gray-200">
       <div>
-        <button className="w-40 mt-5 mx-5 px-5 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary">Add Employee</button>
+        <button className="w-40 mt-5 mx-5 px-5 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary">
+          Add Employee
+        </button>
       </div>
       <div className="w-1/4 my-5 mx-5 py-10 px-5 rounded-2xl bg-white">
         <div className="flex flex-col items-center mb-10 gap-4">

@@ -52,12 +52,6 @@ const AdminPage = () => {
                 {studentList.map((item) => (
                   <AdminItems student={item} key={item.key} />
                 ))}
-                {studentList.map((item) => (
-                  <AdminItems student={item} key={item.key} />
-                ))}
-                {studentList.map((item) => (
-                  <AdminItems student={item} key={item.key} />
-                ))}
               </div>
             </div>
           </div>
