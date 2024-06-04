@@ -3,10 +3,12 @@ import { IoIosSearch } from "react-icons/io";
 // import StudentItems from "./StudentItems";
 import { useEffect, useState } from "react";
 import ApplyDateS from "./ApplyDateS";
+import { useSelector } from "react-redux";
 
 const StudentDetails = () => {
   const db = getDatabase();
   let [studentList, setStudentList] = useState([]);
+  const applyitem = useSelector((state) => state.applyedStudent.applyStuD);
 
   useEffect(() => {
     let arr = [];

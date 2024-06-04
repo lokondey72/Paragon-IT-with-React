@@ -1,19 +1,25 @@
 import { FaEdit } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
-const AdminItems = () => {
+const AdminItems = ({ student }) => {
+  // const applyitem = useSelector((state) => state.applyedStudent.applyStuD);
+
   return (
     <>
-      <div className="flex items-center gap-4">
-        <p className="text-lg font-bold text-blue-400">1</p>
-        <div className="w-16 h-16 rounded-full overflow-hidden ">
+      <div className="w-full flex items-center gap-4">
+        {/* <p className="text-lg font-bold text-blue-400">1</p> */}
+        <div className="w-14 h-14 rounded-full overflow-hidden ">
           <img
-            className="w-full"
-            src="/public/Student-img-1.png"
+            className="w-full h-full"
+            src={student?.studentprofile}
             alt="Student-img"
           />
         </div>
-        <p className="text-lg mx-10">Lokon Dey</p>
-        <p className="text-lg mx-20">01796-889071</p>
+        <div className="flex">
+          <p className="text-lg mx-5">{student?.studentName}</p>
+          <p className="text-lg mx-20">{student?.studentNumber}</p>
+          <p className="text-lg mx-20">{student?.today}</p>
+        </div>
         <button className="">
           <FaEdit />
         </button>
