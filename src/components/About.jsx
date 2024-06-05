@@ -10,7 +10,6 @@ const About = () => {
               <h2 className="text-center font-bold font-body text-4xl">
                 About Us
               </h2>
-              <div className="w-40 h-1 bg-black m-auto"></div>
             </div>
 
             <div className="lg:flex justify-between mb-10 mx-5">
@@ -22,7 +21,7 @@ const About = () => {
                     alt="CEO-of-paragonit"
                   />
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center gap-2">
                   <h4 className="text-2xl font-bold">Muzahid Billah</h4>
                   <p className="text-lg font-semibold">CEO of Paragon IT</p>
                 </div>
@@ -43,7 +42,7 @@ const About = () => {
                     alt=""
                   />
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center gap-2">
                   <h4 className="text-2xl font-bold">Ismail Hossen Hridoy</h4>
                   <p className="text-lg font-semibold">
                     HR Admin of Paragon IT
@@ -68,7 +67,7 @@ const About = () => {
                     alt=""
                   />
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center gap-2">
                   <h4 className="text-2xl font-bold">Jubayer Ahammed Nayeem</h4>
                   <p className="text-lg font-semibold">Trainer of Paragon IT</p>
                 </div>
@@ -89,7 +88,7 @@ const About = () => {
                     alt=""
                   />
                 </div>
-                <div className="flex items-center gap-4">
+                <div className="flex flex-col items-center gap-2">
                   <h4 className="text-2xl font-bold">Muzahid Billah</h4>
                   <p className="text-lg font-semibold">CEO of Paragon IT</p>
                 </div>

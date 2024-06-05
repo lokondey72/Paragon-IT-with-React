@@ -54,7 +54,7 @@ const LogIn = () => {
       <div>
         <div className="flex items-center justify-center">
           <ToastContainer />
-          <div className="w-44 h-18 my-20">
+          <div className="w-40 h-14 my-5">
             <img
               className="w-full h-full"
               src="/Paragon-it-logo2.png"

@@ -54,7 +54,7 @@ const ApplyNow = () => {
       const downloadURL = await getDownloadURL(storageRef);
       certificates[certificateName] = downloadURL;
     }
-    await set(push(ref(db, "studentList/")), {
+    await set(push(ref(db, "applyList/")), {
       studentName,
       fatherName,
       motherName,
