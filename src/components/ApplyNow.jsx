@@ -8,8 +8,13 @@ import {
   uploadBytes,
   getDownloadURL,
 } from "firebase/storage";
+import { useDispatch, useSelector } from "react-redux";
+// import { increment } from "../Slice/studentCounterSlice";
+import { ToastContainer, toast } from "react-toastify";
+import { increment } from "../Slice/studentCounterSlice";
 
 const ApplyNow = () => {
+  const dispatch = useDispatch();
   const db = getDatabase();
   let [studentName, setStudentName] = useState("");
   let [fatherName, setFatherName] = useState("");
@@ -46,7 +51,13 @@ const ApplyNow = () => {
   var yyyy = today.getFullYear();
   today = dd + "/" + month + "/" + yyyy;
 
+  const count = useSelector((state) => state.studentCounterSlice.value);
+  console.log(count);
+
   const handelApply = async () => {
+    dispatch(increment());
+    localStorage.setItem("apllyed", JSON.stringify(count));
+    console.log(increment());
     const certificates = {};
     for (let certificateName in studentCertificate) {
       const storageRef = ires(storage, `${studentEmail} - ${certificateName}`);
@@ -64,12 +75,20 @@ const ApplyNow = () => {
       month,
       today,
       ...certificates,
+    }).then(() => {
+      toast.success("Apply successfull...", {
+        position: "top-center",
+        autoClose: 3000,
+        closeOnClick: true,
+        theme: "light",
+      });
     });
   };
 
   return (
     <>
       <div className="container my-24">
+        <ToastContainer />
         <div className="lg:flex justify-between">
           <div className="lg:w-2/5 lg:ml-60 flex flex-col items-center justify-center">
             <div className="w-full bg-white rounded-lg p-6">
@@ -190,12 +209,19 @@ const ApplyNow = () => {
                 </div>
 
                 <button
-                  onClick={handelApply}
+                  onClick={() => handelApply()}
                   type="submit"
                   className="bg-gradient-to-r from-indigo-500 to-primary text-white font-bold py-2 px-4 rounded-md mt-10 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
                 >
                   Apply
                 </button>
+                <p>{count}</p>
+                {/* <button
+                  onClick={() => }
+                  className="bg-gradient-to-r from-indigo-500 to-primary text-white font-bold py-2 px-4 rounded-md mt-10 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+                >
+                  increment
+                </button> */}
               </div>
             </div>
           </div>

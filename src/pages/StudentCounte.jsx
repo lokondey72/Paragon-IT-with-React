@@ -1,6 +1,9 @@
 import { IoIosSearch } from "react-icons/io";
+import { useSelector } from "react-redux";
 
 const StudentCounte = () => {
+  const count = useSelector((state) => state.studentCounterSlice.value);
+  
   return (
     <div>
       <div className="rounded-lg bg-gray-200 m-5 p-5">
@@ -9,7 +12,9 @@ const StudentCounte = () => {
             <IoIosSearch />
           </div>
           <div className="w-full">
-            <div></div>
+            <div>
+              <p>{count}</p>
+            </div>
           </div>
         </div>
       </div>
