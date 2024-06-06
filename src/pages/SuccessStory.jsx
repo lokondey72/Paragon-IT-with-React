@@ -7,7 +7,6 @@ const SuccessStory = () => {
             <h2 className="text-center text-4xl font-bold font-body">
               Success Story
             </h2>
-            <div className="w-60 h-1 bg-black m-auto"></div>
           </div>
           <div className="lg:flex gap-10 mt-20">
             <div className="mx-5 lg:mx-0 lg:w-1/2">

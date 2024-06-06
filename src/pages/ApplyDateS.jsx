@@ -1,10 +1,13 @@
 // import { getDatabase, onValue, ref } from "firebase/database";
 // import { useEffect, useState } from "react";
 // import StudentItems from "./StudentItems";
+import { FaEdit } from "react-icons/fa";
 import { applyData } from "../Slice/applyedStudent";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import AdminItems from "./AdminItems";
+import { FaCheckSquare } from "react-icons/fa";
+import { MdOutlineCancelPresentation } from "react-icons/md";
 
 const ApplyDateS = ({ student }) => {
   // const db = getDatabase();
@@ -46,7 +49,7 @@ const ApplyDateS = ({ student }) => {
 
   return (
     <>
-      <div className="w-3/4 mx-5 my-2">
+      <div className="w-full mx-5 my-2">
         <div>
           <Link to="/admin/Details">
             <button
@@ -54,7 +57,26 @@ const ApplyDateS = ({ student }) => {
               className="w-full py-3 px-10 rounded-xl text-white bg-gray-500 hover:bg-primary"
             >
               <div className="my-2">
-                <AdminItems student={student} />
+                {/* <AdminItems student={student} /> */}
+                <div className="w-full flex items-center gap-4">
+                  <div className="w-14 h-14 rounded-full overflow-hidden ">
+                    <img
+                      className="w-full h-full"
+                      src={student?.studentprofile}
+                      alt="Student-img"
+                    />
+                  </div>
+                  <div className="w-11/12 flex">
+                    <p className="w-1/2 text-lg px-2">{student?.studentName}</p>
+                    <p className="w-1/4 text-lg mx-20">
+                      {student?.studentNumber}
+                    </p>
+                    <p className="w-72 text-lg mr-10">{student?.today}</p>
+                  </div>
+                  <button className="text-green-500 mr-5">
+                    <FaEdit />
+                  </button>
+                </div>
               </div>
             </button>
           </Link>

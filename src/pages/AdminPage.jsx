@@ -2,14 +2,16 @@ import { IoIosSearch } from "react-icons/io";
 import AdminItems from "./AdminItems";
 import { useEffect, useState } from "react";
 import { getDatabase, onValue, ref } from "firebase/database";
+import StudentCounte from "./StudentCounte";
 
 const AdminPage = () => {
   const db = getDatabase();
-  let [studentList, setStudentList] = useState([]);
+  const [studentList, setStudentList] = useState([]);
+  const [realtime, setRealtime] = useState(false);
 
   useEffect(() => {
     let arr = [];
-    const starCountRef = ref(db, "studentList/");
+    const starCountRef = ref(db, "applyList/");
     onValue(starCountRef, (snapshot) => {
       snapshot.forEach((item) => {
         arr.push({ ...item.val(), key: item.key });
@@ -21,7 +23,7 @@ const AdminPage = () => {
   return (
     <>
       <div className="w-full mb-5">
-        <div className="w-4/5 rounded-lg bg-gray-200 m-5 p-5">
+        <div className="rounded-lg bg-gray-200 m-5 p-5">
           <div className="w-full flex items-center rounded-xl overflow-hidden">
             <div className="py-2 px-2 text-2xl bg-white">
               <IoIosSearch />
@@ -36,6 +38,8 @@ const AdminPage = () => {
           </div>
         </div>
 
+        <StudentCounte />
+
         <div className="mx-10">
           <div className="w-fit h-full p-5 rounded-3xl bg-gray-200">
             <div className="bg-neutral-800 rounded-3xl text-neutral-300 p-4 flex flex-col items-start justify-center gap-3">
@@ -48,7 +52,7 @@ const AdminPage = () => {
                 </ul>
               </div>
 
-              <div className="h-96 flex flex-col gap-4 overflow-y-scroll">
+              <div className="h-80 flex flex-col gap-4 overflow-y-scroll">
                 {studentList.map((item) => (
                   <AdminItems student={item} key={item.key} />
                 ))}

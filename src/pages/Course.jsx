@@ -10,7 +10,6 @@ const Course = () => {
               <h2 className="text-center text-4xl font-bold font-body">
                 Our Course's
               </h2>
-              <div className="w-56 h-1 bg-black m-auto"></div>
             </div>
             <div className="lg:flex justify-between text-center lg:mx-4 lg:my-14">
               <div className="my-10 lg:my-0">

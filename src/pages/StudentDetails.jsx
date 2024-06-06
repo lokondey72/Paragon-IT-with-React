@@ -25,7 +25,7 @@ const StudentDetails = () => {
   return (
     <>
       <div className="w-full mb-5">
-        <div className="w-4/5 rounded-lg bg-gray-200 m-5 p-5">
+        <div className="rounded-lg bg-gray-200 m-5 p-5">
           <div className="w-full flex items-center rounded-xl overflow-hidden">
             <div className="py-2 px-2 text-2xl bg-white">
               <IoIosSearch />
@@ -39,7 +39,7 @@ const StudentDetails = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap mx-5">
           {studentList.map((item) => (
             <ApplyDateS student={item} key={item.key} />
           ))}
