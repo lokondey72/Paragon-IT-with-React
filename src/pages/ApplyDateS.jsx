@@ -52,14 +52,14 @@ const ApplyDateS = ({ student }) => {
       <div className="w-full mx-5 my-2">
         <div>
           <Link to="/admin/Details">
-            <button
+            <div
               onClick={handelStuInfo}
               className="w-full py-3 px-10 rounded-xl text-white bg-gray-500 hover:bg-primary"
             >
               <div className="my-2">
                 {/* <AdminItems student={student} /> */}
                 <div className="w-full flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full overflow-hidden ">
+                  <div className="w-14 h-12 rounded-full overflow-hidden ">
                     <img
                       className="w-full h-full"
                       src={student?.studentprofile}
@@ -78,7 +78,7 @@ const ApplyDateS = ({ student }) => {
                   </button>
                 </div>
               </div>
-            </button>
+            </div>
           </Link>
         </div>
       </div>

@@ -14,7 +14,7 @@ const AdminNav = () => {
 
   return (
     <>
-      <div className="w-1/3 h-screen px-5 bg-gray-200 overflow-y-scroll">
+      <div className="w-1/3 px-5 bg-gray-200 overflow-y-scroll">
         <div className="my-5 py-10 px-5 rounded-2xl bg-white">
           <div className="flex items-center mb-10 gap-4">
             <div className="w-14 h-14 rounded-full overflow-hidden">

@@ -7,7 +7,7 @@ import StudentCounte from "./StudentCounte";
 const AdminPage = () => {
   const db = getDatabase();
   const [studentList, setStudentList] = useState([]);
-  const [realtime, setRealtime] = useState(false);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     let arr = [];
@@ -30,6 +30,7 @@ const AdminPage = () => {
             </div>
             <div className="w-full">
               <input
+                onChange={(e) => setSearch(e.target.value)}
                 placeholder="search"
                 type="text"
                 className="w-full bg-white pr-10 py-2 text-base font-semibold outline-0"
@@ -38,7 +39,7 @@ const AdminPage = () => {
           </div>
         </div>
 
-        <StudentCounte />
+        {/* <StudentCounte /> */}
 
         <div className="mx-10">
           <div className="w-fit h-full p-5 rounded-3xl bg-gray-200">

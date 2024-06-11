@@ -56,8 +56,8 @@ const ApplyNow = () => {
 
   const handelApply = async () => {
     dispatch(increment());
-    localStorage.setItem("apllyed", JSON.stringify(count));
-    console.log(increment());
+    // localStorage.setItem("apllyed", JSON.stringify(count));
+    // console.log(increment());
     const certificates = {};
     for (let certificateName in studentCertificate) {
       const storageRef = ires(storage, `${studentEmail} - ${certificateName}`);

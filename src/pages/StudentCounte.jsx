@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 
 const StudentCounte = () => {
   const count = useSelector((state) => state.studentCounterSlice.value);
+  console.log(count);
   
   return (
     <div>
