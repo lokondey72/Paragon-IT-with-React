@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import AdminItems from "./AdminItems";
 import { FaCheckSquare } from "react-icons/fa";
 import { MdOutlineCancelPresentation } from "react-icons/md";
+import { RiDeleteBin6Line } from "react-icons/ri";
 
 const ApplyDateS = ({ student }) => {
   // const db = getDatabase();
@@ -51,15 +52,18 @@ const ApplyDateS = ({ student }) => {
     <>
       <div className="w-full mx-5 my-2">
         <div>
-          <Link to="/admin/Details">
-            <div
-              onClick={handelStuInfo}
-              className="w-full py-3 px-10 rounded-xl text-white bg-gray-500 hover:bg-primary"
-            >
-              <div className="my-2">
-                {/* <AdminItems student={student} /> */}
-                <div className="w-full flex items-center gap-4">
-                  <div className="w-14 h-12 rounded-full overflow-hidden ">
+          <div className="w-full py-3 px-10 rounded-xl text-white bg-gray-500 hover:bg-primary">
+            <div className="my-2">
+              {/* <AdminItems student={student} /> */}
+              <div className="w-full flex items-center gap-4">
+                <Link
+                  className="w-full flex items-center gap-4"
+                  to="/admin/Details"
+                >
+                  <div
+                    onClick={handelStuInfo}
+                    className="w-14 h-14 rounded-full overflow-hidden "
+                  >
                     <img
                       className="w-full h-full"
                       src={student?.studentprofile}
@@ -73,13 +77,13 @@ const ApplyDateS = ({ student }) => {
                     </p>
                     <p className="w-72 text-lg mr-10">{student?.today}</p>
                   </div>
-                  <button className="text-green-500 mr-5">
-                    <FaEdit />
-                  </button>
-                </div>
+                </Link>
+                <button className="text-green-500 bg-red-500 p-2 mr-5">
+                  <RiDeleteBin6Line />
+                </button>
               </div>
             </div>
-          </Link>
+          </div>
         </div>
       </div>
     </>

@@ -215,13 +215,7 @@ const ApplyNow = () => {
                 >
                   Apply
                 </button>
-                <p>{count}</p>
-                {/* <button
-                  onClick={() => }
-                  className="bg-gradient-to-r from-indigo-500 to-primary text-white font-bold py-2 px-4 rounded-md mt-10 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
-                >
-                  increment
-                </button> */}
+               
               </div>
             </div>
           </div>
