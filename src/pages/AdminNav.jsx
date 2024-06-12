@@ -45,6 +45,14 @@ const AdminNav = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/admin/section">
+                  <button className="flex items-center gap-2 w-40 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary">
+                    <p className="mx-auto">section Details</p>
+                    {/* <IoIosArrowDroprightCircle /> */}
+                  </button>
+                </Link>
+              </li>
+              <li>
                 <Link to="/admin/student">
                   <button className="flex items-center gap-2 w-40 py-5 rounded-xl text-white bg-gray-500 hover:bg-primary">
                     <p className="mx-auto">Student Details</p>

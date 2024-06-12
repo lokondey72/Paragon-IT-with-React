@@ -30,7 +30,7 @@ const AdminPage = () => {
             </div>
             <div className="w-full">
               <input
-                onChange={(e) => setSearch(e.target.value)}
+                // onChange={(e) => setSearch(e.target.value)}
                 placeholder="search"
                 type="text"
                 className="w-full bg-white pr-10 py-2 text-base font-semibold outline-0"
@@ -42,18 +42,18 @@ const AdminPage = () => {
         {/* <StudentCounte /> */}
 
         <div className="mx-10">
-          <div className="w-fit h-full p-5 rounded-3xl bg-gray-200">
+          <div className="w-full h-full p-5 rounded-3xl bg-gray-200">
             <div className="bg-neutral-800 rounded-3xl text-neutral-300 p-4 flex flex-col items-start justify-center gap-3">
               <div className="w-full mx-5 border-b">
                 <ul className="flex gap-10 py-3">
                   <li>Photo</li>
-                  <li className="mx-10">Name</li>
-                  <li className="mx-20">Number</li>
+                  <li className="ml-5 mr-20">Name</li>
+                  <li className="mx-24">Number</li>
                   <li className="ml-10">Date</li>
                 </ul>
               </div>
 
-              <div className="h-80 flex flex-col gap-4 overflow-y-scroll">
+              <div className="w-full h-80 flex flex-col gap-4 mx-5 overflow-y-scroll">
                 {studentList.map((item) => (
                   <AdminItems student={item} key={item.key} />
                 ))}

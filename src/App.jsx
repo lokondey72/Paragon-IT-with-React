@@ -20,6 +20,7 @@ import SignUp from "./pages/SignUp";
 import ApplyNow from "./components/ApplyNow";
 import StudentItems from "./pages/StudentItems";
 import ParagonEmployee from "./pages/ParagonEmployee";
+import CourseSaction from "./pages/CourseSaction";
 
 function App() {
   const router = createBrowserRouter(
@@ -37,6 +38,7 @@ function App() {
         </Route>
         <Route path="/admin" element={<AdminLayout />}>
           <Route index element={<AdminPage />}></Route>
+          <Route path="/admin/section" element={<CourseSaction />}></Route>
           <Route path="/admin/student" element={<StudentDetails />}></Route>
           <Route path="/admin/Details" element={<StudentItems />}></Route>
           <Route path="/admin/employee" element={<ParagonEmployee />}></Route>

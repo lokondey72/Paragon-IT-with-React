@@ -9,14 +9,17 @@ const Footer = () => {
       <div className="container py-10">
         <div className="lg:flex justify-between">
           <div className="mx-5 mb-5 lg:m-0">
-            <Link to="/">
-              <button className="w-38 h-14">
+            <Link to="/" className="flex items-center gap-1">
+              <div className="w-14 h-14">
                 <img
                   className="w-full h-full"
-                  src="/Paragon-it-logo2.png"
-                  alt="Paragon-it-logo"
+                  src="/Paragon-it-logo-(1).png"
+                  alt="Paragon-it-logo-(1)"
                 />
-              </button>
+              </div>
+              <div>
+                <h2 className="text-2xl font-bold font-body text-black">PARAGON IT</h2>
+              </div>
             </Link>
             <h3 className="my-10 w-80 text-4xl font-bold font-body">
               The Best IT in Your Home Town

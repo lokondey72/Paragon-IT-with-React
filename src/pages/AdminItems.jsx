@@ -2,15 +2,39 @@ import { FaEdit } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { FaCheckSquare } from "react-icons/fa";
 import { MdOutlineCancelPresentation } from "react-icons/md";
-import { getDatabase, push, ref, remove, set } from "firebase/database";
+import {
+  getDatabase,
+  onValue,
+  push,
+  ref,
+  remove,
+  set,
+  update,
+} from "firebase/database";
+import { useEffect, useState } from "react";
 
 const AdminItems = ({ student }) => {
   const db = getDatabase();
-  console.log(student);
+  const [sessionData, setSessionData] = useState([]);
+  const sessionKey = sessionData.map((item) => item.key);
+  const sessionTName = sessionData.map((item) => item.sessionName);
+  // console.log(student);
   // const applyitem = useSelector((state) => state.applyedStudent.applyStuD);
 
+  useEffect(() => {
+    let arr = [];
+    const starCountRef = ref(db, "session/");
+    onValue(starCountRef, (snapshot) => {
+      snapshot.forEach((item) => {
+        arr.push({ ...item.val(), key: item.key });
+      });
+      setSessionData(arr);
+    });
+  }, []);
+  console.log(sessionTName);
+
   const handelConfirm = (data) => {
-    set(push(ref(db, "studentList/")), {
+    update(ref(db, "session/" + sessionKey), {
       studentName: student.studentName,
       fatherName: student.fatherName,
       motherName: student.motherName,
@@ -44,9 +68,9 @@ const AdminItems = ({ student }) => {
           />
         </div>
         <div className="w-11/12 flex">
-          <p className="w-1/2 text-lg px-2">{student?.studentName}</p>
-          <p className="w-1/4 text-lg mx-20">{student?.studentNumber}</p>
-          <p className="w-72 text-lg mr-10">{student?.today}</p>
+          <p className="w-2/5 text-base px-2">{student?.studentName}</p>
+          <p className="w-1/4 text-base mr-10">{student?.studentNumber}</p>
+          <p className="w-72 text-base mr-10">{student?.today}</p>
         </div>
         <button
           onClick={() => handleCancel(student)}

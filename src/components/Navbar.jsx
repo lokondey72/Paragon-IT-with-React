@@ -14,13 +14,16 @@ const Navbar = () => {
       <div className="py-3 w-full lg:w-full relative lg:fixed top-0 bg-[rgba(13,121,254,0.3)] px-2">
         <div className="container flex justify-between items-center">
           <div>
-            <Link to="/" className="flex items-center gap-2">
-              <div className="w-38 h-14">
+            <Link to="/" className="flex items-center gap-1">
+              <div className="w-14 h-14">
                 <img
                   className="w-full h-full"
-                  src="/Paragon-it-logo2.png"
+                  src="/Paragon-it-logo-(1).png"
                   alt="Paragon-it-logo-(1)"
                 />
+              </div>
+              <div>
+                <h2 className="text-xl font-bold text-white">PARAGON IT</h2>
               </div>
             </Link>
           </div>
