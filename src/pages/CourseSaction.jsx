@@ -3,18 +3,20 @@ import { IoIosSearch } from "react-icons/io";
 import { GiCancel } from "react-icons/gi";
 import { useEffect, useState } from "react";
 import SessionItem from "./SessionItem";
+import { Link } from "react-router-dom";
 
 const CourseSaction = () => {
   const db = getDatabase();
   const [show, setShow] = useState(false);
   const [sessionName, setSessionName] = useState("");
   const [sessionData, setSessionData] = useState([]);
+  const sessionKey = sessionData.map((item) => item.key);
 
   const handelAdd = () => {
     if (!sessionName) {
       alert("Enter Session Name Please");
     } else {
-      set(push(ref(db, "session/")), {
+      set(ref(db, "session/" + sessionName), {
         sessionName: sessionName,
       }).then(() => {
         setShow(false);
@@ -25,7 +27,7 @@ const CourseSaction = () => {
 
   useEffect(() => {
     let arr = [];
-    const starCountRef = ref(db, "session/");
+    const starCountRef = ref(db, "session/" + sessionKey);
     onValue(starCountRef, (snapshot) => {
       snapshot.forEach((item) => {
         arr.push({ ...item.val(), key: item.key });
@@ -37,6 +39,16 @@ const CourseSaction = () => {
 
   const handelCreate = () => {
     setShow(!show);
+  };
+
+  const handelSession = () => {
+    console.log("click");
+    // for (let index = 0; index < 1; ++index) {
+    //   // const element = array[index];
+    //   set(ref(db, "session/" + index), {
+    //     sessionName: sessionName,
+    //   });
+    // }
   };
 
   return (
@@ -65,11 +77,15 @@ const CourseSaction = () => {
             Create Section :
           </button>
         </div>
-        <div className="flex flex-wrap">
+        <Link
+          to="/admin/sessionpage"
+          onClick={handelSession}
+          className="flex flex-wrap"
+        >
           {sessionData.map((item) => (
             <SessionItem data={item} key={item.key} />
           ))}
-        </div>
+        </Link>
       </div>
       {show && (
         <div className="w-full absolute z-10 bg-[rgb(0,0,0,0.5)]">

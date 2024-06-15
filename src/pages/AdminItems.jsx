@@ -31,10 +31,10 @@ const AdminItems = ({ student }) => {
       setSessionData(arr);
     });
   }, []);
-  console.log(sessionTName);
+  // console.log(sessionTName);
 
   const handelConfirm = (data) => {
-    update(ref(db, "session/" + sessionKey), {
+    update(push(ref(db, "session/" + sessionKey)), {
       studentName: student.studentName,
       fatherName: student.fatherName,
       motherName: student.motherName,
